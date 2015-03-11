@@ -3,6 +3,6 @@ require_relative '../lib/customer_repository'
 
 class CustomerRepositoryTest < Minitest::Test
   def test_it_exists
-    assert CustomerRepository.new
+      assert CustomerRepository.new
   end
 end
