@@ -5,24 +5,26 @@ class Merchant
               :name,
               :created_at,
               :updated_at,
-              :repository
 
-  def initialize(data, parent)
-    @id         = data[:id].to_i
-    @name       = data[:name]
-    @created_at = data[:created_at]
-    @updated_at = data[:updated_at]
-    @repository = parent
+  def initialize(id, name, created_at, updated_at)
+    @id = id
+    @name = name
+    @created_at = created_at
+    @updated_at = updated_at
   end
 
-# items returns a collection of Item instances
+
+# items returns a collection of Item instances 
 # associated with that merchant for the products they sell
   def items
-    repository
+    repository.find_items(id)
   end
 
-# invoices returns a collection of Invoice instances
+# invoices returns a collection of Invoice instances 
 # associated with that merchant from their known orders
+  def invoices
+    repository.find_invoices(id)
+  end
 
 end
 
