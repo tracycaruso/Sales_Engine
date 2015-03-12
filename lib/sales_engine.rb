@@ -11,7 +11,7 @@ class SalesEngine
 
 	def startup
 		merchant_data = Parser.call("#{@filepath}/merchants.csv")
-		@merchant_repository = MerchantRepository.new(merchant_data)
+		@merchant_repository = MerchantRepository.new(merchant_data, self)
 	end	
 
 	def initialize_merchant_repository

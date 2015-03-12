@@ -3,8 +3,25 @@ require_relative '../lib/merchant_repository'
 
 class MerchantTest < Minitest::Test
 
+  def setup
+    @sales_engine = Minitest::Mock.new
+
+    @fake_data = [
+      {
+        :id => 1
+        :name => "joe"
+        :created_at => "2012"
+        :updated_at => "2014"
+      }
+    ]
+  end
+
   def test_it_exists
-    assert MerchantRepository.new
+    assert MerchantRepository.new(@fake_data, sales_engine)
+  end
+
+  def test_it_knows_its_parent
+
   end
 
   def responds_to_all_method

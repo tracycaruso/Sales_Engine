@@ -84,7 +84,7 @@ class TransactionTest < Minitest::Test
   def returns_all_transactions_by_created_at
   end
 
-  def responds_to_find_all)by_updated_at
+  def responds_to_find_all_by_updated_at
   end
 
   def returns_all_transactions_by_updated_at

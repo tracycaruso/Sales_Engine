@@ -1,4 +1,4 @@
-equire 'csv'
+require 'csv'
 
 # module CSVLoader
   

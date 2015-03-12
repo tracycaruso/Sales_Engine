@@ -3,4 +3,7 @@
 # The job of customer parser is to take CSV data and turn it into data objects(Doesn't have to store data)
 # Once you know how that works, go through and do the same thing with the other CSV’s.
 class CustomerRepository
+def inspect
+   "#<#{self.class} #{@customers.size} rows>"
+ end
 end
