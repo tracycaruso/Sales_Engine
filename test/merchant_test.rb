@@ -25,8 +25,32 @@ class MerchantTest < Minitest::Test
     assert_equal "2012-03-27 14:53:59 UTC", merchant.updated_at
   end
 
-  def test_it_sends_items_to_its_repository
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  def test_it_delegates_items_to_its_repository
+    parent.expect(:find_items, nil, [1])
     merchant.items
+    parent.verify
+  end
+
+  def test_it_delegates_invoices_to_its_repository
+    parent.expect(:find_invoices, nil, [1])
+    merchant.invoices
+    parent.verify
   end
 
 end
