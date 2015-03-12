@@ -15,13 +15,13 @@ class Merchant
     @repository = parent
   end
 
-# items returns a collection of Item instances 
+# items returns a collection of Item instances
 # associated with that merchant for the products they sell
   def items
     repository
   end
 
-# invoices returns a collection of Invoice instances 
+# invoices returns a collection of Invoice instances
 # associated with that merchant from their known orders
 
 end
@@ -37,8 +37,3 @@ contents.each do |column|
   puts "#{id}   #{name}   #{created_at}   #{updated_at}"
 end
 end
-
-
-
-
-
